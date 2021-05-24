@@ -1,0 +1,26 @@
+-- CREATE TABLE burgers (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   name VARCHAR(255) NOT NULL,
+--   cost DECIMAL(5, 2) NOT NULL,
+--   quantity INT NOT NULL,
+--   modifications VARCHAR(255),
+--   PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE drinks (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   name VARCHAR(255) NOT NUll,
+--   cost DECIMAL(5, 2) NOT NULL,
+--   quantity INT NOT NULL,
+--   modifications VARCHAR(255),
+--   PRIMARY KEY (id)
+-- );
+
+-- CREATE TABLE sides (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   name VARCHAR(255) NOT NUll,
+--   cost DECIMAL(5, 2) NOT NULL,
+--   quantity INT NOT NULL,
+--   modifications VARCHAR(255),
+--   PRIMARY KEY (id)
+-- );
