@@ -35,21 +35,23 @@ namespace burgershack.Controllers
       }
     }
 
-    public ActionResult<Burger> Create()
-    {
-      throw new NotImplementedException();
-    }
-
-    public ActionResult<Burger> Delete()
+    [HttpDelete("{id}")]
+    public ActionResult<String> Delete(int id)
     {
       try
       {
-        throw new NotImplementedException();
+        _bs.Delete(id);
+        return ("Successfully Deleted.");
       }
       catch (Exception e)
       {
         return BadRequest(e.Message);
       }
+    }
+
+    public ActionResult<Burger> Delete()
+    {
+      throw new NotImplementedException();
     }
 
     [HttpGet]
@@ -66,11 +68,13 @@ namespace burgershack.Controllers
       }
     }
 
-    public ActionResult<Burger> GetOne()
+    [HttpGet("{id}")]
+    public ActionResult<Burger> GetOne(int id)
     {
       try
       {
-        throw new NotImplementedException();
+        Burger burger = _bs.GetOne(id);
+        return Ok(burger);
       }
       catch (Exception e)
       {
@@ -78,16 +82,24 @@ namespace burgershack.Controllers
       }
     }
 
-    public ActionResult<Burger> Update()
+    [HttpPut("{id}")]
+    public ActionResult<Burger> Update(int id, [FromBody] Burger update)
     {
       try
       {
-        throw new NotImplementedException();
+        update.Id = id;
+        Burger updated = _bs.Update(update);
+        return Ok(updated);
       }
       catch (Exception e)
       {
         return BadRequest(e.Message);
       }
+    }
+
+    public ActionResult<Burger> Update(Burger data)
+    {
+      throw new NotImplementedException();
     }
   }
 }
